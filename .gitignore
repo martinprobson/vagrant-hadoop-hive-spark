@@ -46,3 +46,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Misc
+/deploy

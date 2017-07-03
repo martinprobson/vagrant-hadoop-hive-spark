@@ -42,6 +42,7 @@
 # - SPARK_DAEMON_JAVA_OPTS, to set config properties for all daemons (e.g. "-Dx=y")
 # - SPARK_PUBLIC_DNS, to set the public dns name of the master or workers
 
-SPARK_DAEMON_JAVA_OPTS="-Dspark.history.fs.logDirectory=hdfs:///user/spark/applicationHistory"
+#SPARK_DAEMON_JAVA_OPTS="-Dspark.history.fs.logDirectory=hdfs:///user/spark/applicationHistory"
+SPARK_DAEMON_JAVA_OPTS="-Dspark.history.fs.logDirectory=hdfs://node1/user/spark/applicationHistory"
 
 

@@ -14,7 +14,7 @@ setup as expected.
 
 SSH into your virtual machine.
 
-    vagrant ssh
+    vtagrant ssh
 
 Run an example MapReduce job.
 
@@ -45,7 +45,7 @@ Create a table and run a query over it.
         count INT
     )
     ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
-    LOCATION '/user/vagrant/wordcount-output';
+    LOCATION '/user/ubuntu/wordcount-output';
 
     select * from wordcount order by count;
 
@@ -57,7 +57,7 @@ Run word count in Spark.
 
     // enter paste mode
     :paste
-    sc.textFile("hdfs:///user/vagrant/wordcount-input/hello.txt")
+    sc.textFile("hdfs:///user/ubuntu/wordcount-input/hello.txt")
        .flatMap(line => line.split(" "))
        .map(word => (word, 1))
        .reduceByKey(_ + _)

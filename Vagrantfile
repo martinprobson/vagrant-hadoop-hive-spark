@@ -5,6 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     i = 1
+#    config.vm.network :forwarded_port, guest: 3310, host: 3310
     config.vm.define "node#{i}" do |node|
         node.vm.box = "ubuntu/xenial64"
 	config.vm.define :node1 do |t|
@@ -15,12 +16,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         end
         node.vm.network :private_network, ip: "10.211.55.101"
         node.vm.hostname = "node1"
-
         node.vm.provision "shell", path: "scripts/setup-ubuntu.sh"
         node.vm.provision "shell", path: "scripts/setup-java.sh"
+ 	node.vm.provision "shell", path: "scripts/setup-mysql.sh"
         node.vm.provision "shell", path: "scripts/setup-hadoop.sh"
         node.vm.provision "shell", path: "scripts/setup-hive.sh"
         node.vm.provision "shell", path: "scripts/setup-spark.sh"
+        node.vm.provision "shell", path: "scripts/setup-sqoop.sh"
         node.vm.provision "shell", path: "scripts/finalize-ubuntu.sh"
     end
 end

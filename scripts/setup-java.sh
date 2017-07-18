@@ -16,6 +16,11 @@ function setupEnvVars {
 	source /etc/profile.d/java.sh
 }
 
+function setupMysqlConnector {
+	echo "Mysql java connector setup"
+	curl -sS -o ${JAVA_HOME}/lib/ext/${JAVA_MYSQL_CONNECTOR_JAR} -O -L ${JAVA_MYSQL_CONNECTOR_DOWNLOAD}
+}
+
 function installJava {
 	installRemoteJava
 }
@@ -23,3 +28,5 @@ function installJava {
 echo "setup java"
 installJava
 setupEnvVars
+setupMysqlConnector
+

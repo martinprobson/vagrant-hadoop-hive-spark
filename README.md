@@ -8,6 +8,7 @@ Vagrant project to spin up a single virtual machine running:
 * Hadoop 2.7.3
 * Hive 1.2.2
 * Spark 2.1.1
+* mysql 5.7 (for hive metastore)
 
 The virtual machine will be running the following services:
 
@@ -15,6 +16,7 @@ The virtual machine will be running the following services:
 * YARN ResourceManager/NodeManager + JobHistoryServer + ProxyServer
 * Hive metastore and server2
 * Spark history server
+* mysql
 
 # Getting Started
 
@@ -35,6 +37,13 @@ Here are some useful links to navigate to various UI's:
 * HDFS: (http://10.211.55.101:50070/dfshealth.html)
 * Spark history server: (http://10.211.55.101:18080)
 * Spark context UI (if a Spark context is running): (http://10.211.55.101:4040)
+
+# Mysql
+
+mysql database connection 
+
+* `root@10.211.55.101:3306` (for root DBA access - password is 'root') 
+* `hive@10.211.55.101:3306` (for hive metastore user - password is 'hive')
 
 # Shared Folder
 
@@ -81,6 +90,7 @@ up, to bring them up manually use:
 ```
 $ vagrant ssh
 $ sudo -sE
+$ systemctl start mysql.service
 $ /vagrant/scripts/start-hadoop.sh		# Starts the namenode/datanode plus yarn.
 $ /vagrant/scripts/start-hive.sh		# Start hiveserver2 plus metastore service.
 $ /vagrent/script/start-spark.sh		# Start Spark history server.
@@ -94,6 +104,7 @@ $ vagrant ssh
 $ sudo -sE
 $ /vagrant/scripts/stop-spark.sh
 $ /vagrant/scripts/stop-hadoop.sh
+$ systemctl stop mysql.service
 
 ```
 

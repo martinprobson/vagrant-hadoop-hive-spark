@@ -22,7 +22,7 @@ function installHive {
 	else
 		installRemoteHive
 	fi
-	ln -s /usr/local/apache-$HIVE_VERSION-bin /usr/local/hive
+	ln -s /usr/local/apache-hive-$HIVE_VERSION-bin /usr/local/hive
 	mkdir /usr/local/hive/logs /usr/local/hive/derby/
 }
 

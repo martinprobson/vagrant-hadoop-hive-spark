@@ -11,7 +11,7 @@ function setupEnvVars {
      	echo "Setting JAVA_HOME"
 	JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/bin/java::")
 	ln -s ${JAVA_HOME} /usr/local/java
-        echo "JAVA_HOME=/usr/local/java" >> /etc/profile.d/java.sh
+        echo "export JAVA_HOME=/usr/local/java" >> /etc/profile.d/java.sh
 	echo export PATH=/usr/local/java/bin:\${PATH} >> /etc/profile.d/java.sh
 	source /etc/profile.d/java.sh
 }

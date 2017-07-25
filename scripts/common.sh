@@ -19,7 +19,7 @@ HADOOP_YARN_HOME=$HADOOP_PREFIX
 
 # hive
 HIVE_VERSION=1.2.2
-HIVE_ARCHIVE=apache-hive-$HIVE_VERSION-bin.tar.gz
+HIVE_ARCHIVE=apache-hive-${HIVE_VERSION}-bin.tar.gz
 HIVE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hive/hive-${HIVE_VERSION}/$HIVE_ARCHIVE
 HIVE_RES_DIR=/vagrant/resources/hive
 HIVE_CONF=/usr/local/hive/conf
@@ -57,6 +57,21 @@ TEZ_RELEASE=apache-tez-${TEZ_VERSION}-bin
 TEZ_ARCHIVE=${TEZ_RELEASE}.tar.gz
 TEZ_MIRROR_DOWNLOAD=http://mirror.catn.com/pub/apache/tez/${TEZ_VERSION}/${TEZ_ARCHIVE}
 TEZ_RES_DIR=/vagrant/resources/tez
+
+# Pig
+PIG_VERSION=0.17.0
+PIG_RELEASE=pig-${PIG_VERSION}
+PIG_ARCHIVE=${PIG_RELEASE}.tar.gz
+PIG_MIRROR_DOWNLOAD=http://apache.mirror.anlx.net/pig/pig-${PIG_VERSION}/${PIG_ARCHIVE}
+PIG_RES_DIR=/vagrant/resources/pig
+
+# flume
+FLUME_VERSION=1.7.0
+FLUME_RELEASE=apache-flume-${FLUME_VERSION}-bin
+FLUME_ARCHIVE=${FLUME_RELEASE}.tar.gz
+FLUME_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/flume/${FLUME_VERSION}/${FLUME_ARCHIVE}
+#FLUME_MIRROR_DOWNLOAD=http://apache.mirror.anlx.net/flume/${FLUME_VERSION}/${FLUME_ARCHIVE}
+FLUME_RES_DIR=/vagrant/resources/flume
 
 # Utility functions
 function resourceExists {

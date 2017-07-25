@@ -10,6 +10,8 @@ Vagrant project to spin up a single virtual machine running:
 * Spark 2.1.1
 * mysql 5.7 (for hive metastore)
 * Tez 0.8.5
+* Pig 0.17.0
+* flume 1.7.0
 
 The virtual machine will be running the following services:
 

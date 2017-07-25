@@ -9,6 +9,7 @@ Vagrant project to spin up a single virtual machine running:
 * Hive 1.2.2
 * Spark 2.1.1
 * mysql 5.7 (for hive metastore)
+* Tez 0.8.5
 
 The virtual machine will be running the following services:
 
@@ -27,6 +28,26 @@ The virtual machine will be running the following services:
 6. Run ```vagrant up``` to create the VM.
 7. Execute ```vagrant ssh``` to login to the VM.
 
+
+# Map Reduce - Tez 
+
+By default map reduce jobs will be executed via Tez to change this to standard MR, change the following parameter in $HADOOP_CONF/mapred-site.xml from: -
+
+```xml
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn-tez</value>
+    </property>
+```
+
+to
+
+```xml
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+```
 
 # Web user interfaces
 

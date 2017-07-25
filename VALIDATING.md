@@ -8,13 +8,14 @@ virtual machine with the following installed:
 * Hadoop YARN
 * Hive
 * Spark
+* Hive on Tez
 
 Let's take a look at each one and validate that it's installed and
 setup as expected.
 
 SSH into your virtual machine.
 
-    vtagrant ssh
+    vagrant ssh
 
 Run an example MapReduce job.
 
@@ -48,6 +49,10 @@ Create a table and run a query over it.
     LOCATION '/user/ubuntu/wordcount-output';
 
     select * from wordcount order by count;
+
+To run the same query using Tez: -
+
+    set hive.execution.engine=tez;
 
 Next launch the interactive Spark shell.
 

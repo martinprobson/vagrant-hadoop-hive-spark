@@ -18,12 +18,13 @@ HADOOP_RES_DIR=/vagrant/resources/hadoop
 HADOOP_YARN_HOME=$HADOOP_PREFIX
 
 # hive
-HIVE_VERSION=hive-1.2.2
-HIVE_ARCHIVE=apache-$HIVE_VERSION-bin.tar.gz
-HIVE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hive/$HIVE_VERSION/$HIVE_ARCHIVE
+HIVE_VERSION=1.2.2
+HIVE_ARCHIVE=apache-hive-$HIVE_VERSION-bin.tar.gz
+HIVE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hive/hive-${HIVE_VERSION}/$HIVE_ARCHIVE
 HIVE_RES_DIR=/vagrant/resources/hive
 HIVE_CONF=/usr/local/hive/conf
 HIVE_PREFIX=/usr/local/hive
+HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
 
 # spark
 SPARK_VERSION=spark-2.1.1
@@ -49,6 +50,13 @@ SQOOP_RELEASE=sqoop-1.4.6.bin__hadoop-2.0.4-alpha
 SQOOP_ARCHIVE=${SQOOP_RELEASE}.tar.gz
 SQOOP_MIRROR_DOWNLOAD=http://mirror.ox.ac.uk/sites/rsync.apache.org/sqoop/1.4.6/${SQOOP_ARCHIVE}
 SQOOP_RES_DIR=/vagrant/resources/sqoop
+
+# Tez
+TEZ_VERSION=0.8.5
+TEZ_RELEASE=apache-tez-${TEZ_VERSION}-bin
+TEZ_ARCHIVE=${TEZ_RELEASE}.tar.gz
+TEZ_MIRROR_DOWNLOAD=http://mirror.catn.com/pub/apache/tez/${TEZ_VERSION}/${TEZ_ARCHIVE}
+TEZ_RES_DIR=/vagrant/resources/tez
 
 # Utility functions
 function resourceExists {

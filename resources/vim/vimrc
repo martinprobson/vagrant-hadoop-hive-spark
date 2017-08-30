@@ -19,6 +19,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'motus/pig.vim'
 
 
 " All your plugins must be added before the following line

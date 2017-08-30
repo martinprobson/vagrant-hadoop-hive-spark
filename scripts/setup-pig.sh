@@ -18,6 +18,7 @@ function setupEnvVars {
 	echo "creating Pig environment variables"
 	cp -f $PIG_RES_DIR/pig.sh /etc/profile.d/pig.sh
 	. /etc/profile.d/pig.sh
+	cp -f $PIG_RES_DIR/pigbootup ${HOME}/.pigbootup
 }
 
 function installPig {

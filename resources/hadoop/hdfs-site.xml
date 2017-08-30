@@ -21,4 +21,8 @@
         <name>dfs.namenode.handler.count</name>
         <value>25</value>
     </property>
+    <property>
+	<name>dfs.replication</name>
+	<value>1</value>
+    </property>
 </configuration>

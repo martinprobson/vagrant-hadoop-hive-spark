@@ -10,6 +10,7 @@ Vagrant project to spin up a single virtual machine running:
 * Spark 2.1.1
 * mysql 5.7 (for hive metastore)
 * Tez 0.8.5
+* Sqoop 1.4.6
 * Pig 0.17.0
 * flume 1.7.0
 
@@ -116,7 +117,7 @@ $ sudo -sE
 $ systemctl start mysql.service
 $ /vagrant/scripts/start-hadoop.sh		# Starts the namenode/datanode plus yarn.
 $ /vagrant/scripts/start-hive.sh		# Start hiveserver2 plus metastore service.
-$ /vagrent/script/start-spark.sh		# Start Spark history server.
+$ /vagrant/scripts/start-spark.sh		# Start Spark history server.
 
 ```
 

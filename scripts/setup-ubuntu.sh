@@ -41,6 +41,8 @@ function setupUtilities {
     # so the `locate` command works
     apt-get install -y mlocate
     updatedb
+    apt-get install -y ant
+    apt-get install -y unzip
 }
 
 echo "setup ubuntu"

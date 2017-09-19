@@ -73,6 +73,15 @@ FLUME_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/flume/${
 #FLUME_MIRROR_DOWNLOAD=http://apache.mirror.anlx.net/flume/${FLUME_VERSION}/${FLUME_ARCHIVE}
 FLUME_RES_DIR=/vagrant/resources/flume
 
+# Zeppelin 
+ZEPPELIN_VERSION=0.7.2
+ZEPPELIN_RELEASE=zeppelin-${ZEPPELIN_VERSION}-bin-netinst
+ZEPPELIN_ARCHIVE=${ZEPPELIN_RELEASE}.tgz
+ZEPPELIN_MIRROR_DOWNLOAD=http://www-eu.apache.org/dist/zeppelin/zeppelin-${ZEPPELIN_VERSION}/${ZEPPELIN_ARCHIVE}
+ZEPPELIN_RES_DIR=/vagrant/resources/zeppelin
+ZEPPELIN_TARGET=/home/ubuntu
+
+
 # Utility functions
 function resourceExists {
 	FILE=/vagrant/resources/$1

@@ -5,7 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     i = 1
-#    config.vm.network :forwarded_port, guest: 8088, host: 8088
+    config.vm.network :forwarded_port, guest: 8080, host: 8080
     config.vm.define "node#{i}" do |node|
         node.vm.box = "ubuntu/xenial64"
 	config.vm.define :node1 do |t|
@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.provision "shell", path: "scripts/setup-tez.sh"
         node.vm.provision "shell", path: "scripts/setup-pig.sh"
         node.vm.provision "shell", path: "scripts/setup-flume.sh"
-        node.vm.provision "shell", path: "scripts/setup-sqoop.sh"
+        node.vm.provision "shell", path: "scripts/setup-zeppelin.sh"
         node.vm.provision "shell", path: "scripts/finalize-ubuntu.sh"
     end
 end

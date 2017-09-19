@@ -13,6 +13,7 @@ Vagrant project to spin up a single virtual machine running:
 * Sqoop 1.4.6
 * Pig 0.17.0
 * flume 1.7.0
+* Zeppelin 0.7.2 (with Spark/scala, md, file and JDBC interpreters)
 
 The virtual machine will be running the following services:
 
@@ -21,6 +22,7 @@ The virtual machine will be running the following services:
 * Hive metastore and server2
 * Spark history server
 * mysql
+* zeppelin notebook server (not started by default - see below)
 
 # Getting Started
 
@@ -61,6 +63,22 @@ Here are some useful links to navigate to various UI's:
 * HDFS: (http://10.211.55.101:50070/dfshealth.html)
 * Spark history server: (http://10.211.55.101:18080)
 * Spark context UI (if a Spark context is running): (http://10.211.55.101:4040)
+* Zeppelin notebook (if notebook server is started) (http://10.211.55.101:8080)
+
+# Apache Zeppelin notebook server
+
+Apache Zeppelin together with spark, md, file and JDBC interpreters is installed by default but not
+started. To manually start the zeppelin daemon run: -
+
+```
+vagrant ssh
+zeppelin-daemon.sh start
+```
+
+as `ubuntu` user from the command line.
+
+
+Notebook server can then be accessed via `http://10.211.55.101:8080`.
 
 # Mysql
 

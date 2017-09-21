@@ -43,6 +43,7 @@ function setupUtilities {
     updatedb
     apt-get install -y ant
     apt-get install -y unzip
+    apt-get install -y python-minimal
 }
 
 echo "setup ubuntu"

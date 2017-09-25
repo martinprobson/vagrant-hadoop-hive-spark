@@ -1,8 +1,3 @@
-SQOOP_RELEASE=sqoop-1.4.6.bin_hadoop-2.0.4-alpha
-SQOOP_ARCHIVE=${SQOOP_RELEASE}.tar.gz
-SQOOP_MIRROR_DOWNLOAD=http://mirror.ox.ac.uk/sites/rsync.apache.org/sqoop/1.4.6/${SQOOP_ARCHIVE}
-SQOOP_RES_DIR=/vagrant/resources/sqoop
-
 #!/bin/bash
 
 source "/vagrant/scripts/common.sh"

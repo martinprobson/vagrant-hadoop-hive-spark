@@ -34,7 +34,7 @@ The virtual machine will be running the following services:
 7. Execute ```vagrant ssh``` to login to the VM.
 
 
-# Map Reduce - Tez 
+# Map Reduce - Tez
 
 By default map reduce jobs will be executed via Tez to change this to standard MR, change the following parameter in $HADOOP_CONF/mapred-site.xml from: -
 
@@ -82,14 +82,14 @@ Notebook server can then be accessed via `http://10.211.55.101:8080`.
 
 # Mysql
 
-mysql database connection 
+mysql database connection
 
-* `root@10.211.55.101:3306` (for root DBA access - password is 'root') 
+* `root@10.211.55.101:3306` (for root DBA access - password is 'root')
 * `hive@10.211.55.101:3306` (for hive metastore user - password is 'hive')
 
 # Shared Folder
 
-Vagrant automatically mounts the folder containing the Vagrant file from the host machine into 
+Vagrant automatically mounts the folder containing the Vagrant file from the host machine into
 the guest machine as `/vagrant` inside the guest.
 
 
@@ -113,8 +113,7 @@ or
 vagrant suspend
 ```
 
-Issue a `vagrant up` command again to restart the VM from where you left off. See, *starting services* below to restart the
-hdfs/yarn/hive and spark daemons.
+Issue a `vagrant up` command again to restart the VM from where you left off.
 
 To completely **wipe** the VM so that `vagrant up` command gives you a fresh machine: -
 
@@ -123,21 +122,6 @@ vagrant destroy
 ```
 
 Then issue `vagrant up` command as usual.
-
-# Starting services in the event of a system restart
-
-If you restart your VM then the Hadoop/Spark/Hive services won't be
-up, to bring them up manually use:
-
-```
-$ vagrant ssh
-$ sudo -sE
-$ systemctl start mysql.service
-$ /vagrant/scripts/start-hadoop.sh		# Starts the namenode/datanode plus yarn.
-$ /vagrant/scripts/start-hive.sh		# Start hiveserver2 plus metastore service.
-$ /vagrant/scripts/start-spark.sh		# Start Spark history server.
-
-```
 
 # To shutdown services cleanly
 

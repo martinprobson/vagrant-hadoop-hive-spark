@@ -155,5 +155,7 @@ The file [DEVELOP.md](DEVELOP.md) contains some tips for developers.
 
 # Credits
 
-Thanks to Alex Holmes for the great work at
+Thanks to [Alex Holmes](https://github.com/alexholmes) for the great work at
 (https://github.com/alexholmes/vagrant-hadoop-spark-hive)
+
+[Matheus Cunha](https://github.com/matheuscunha)

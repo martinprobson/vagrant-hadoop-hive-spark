@@ -21,6 +21,10 @@ function setupSpark {
 	cp -f /vagrant/resources/spark/slaves /usr/local/spark/conf
 	cp -f /vagrant/resources/spark/spark-env.sh /usr/local/spark/conf
 	cp -f /vagrant/resources/spark/spark-defaults.conf /usr/local/spark/conf
+	ln -s $HADOOP_CONF/yarn-site.xml /usr/local/spark/conf/yarn-site.xml
+	ln -s $HADOOP_CONF/core-site.xml /usr/local/spark/conf/core-site.xml
+	ln -s $HADOOP_CONF/hdfs-site.xml /usr/local/spark/conf/hdfs-site.xml
+	ln -s $HIVE_CONF/hive-site.xml   /usr/local/spark/conf/hive-site.xml
 }
 
 function setupEnvVars {

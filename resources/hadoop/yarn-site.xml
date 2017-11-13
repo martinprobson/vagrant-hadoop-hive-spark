@@ -41,4 +41,17 @@
        <name>yarn.nodemanager.vmem-check-enabled</name>
        <value>false</value>
     </property>
+    <!-- Control the size and clean-up interval of yarn resource localization dirs -->
+    <property>
+	    <name>yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage</name>
+	    <value>90.0</value>
+    </property>
+    <property>
+	    <name>yarn.nodemanager.localizer.cache.cleanup.interval-ms</name>
+	    <value>300000</value>
+    </property>
+    <property>
+	    <name>yarn.nodemanager.localizer.cache.target-size-mb</name> 
+	    <value>3000</value>
+    </property>
 </configuration>

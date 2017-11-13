@@ -41,6 +41,9 @@ function installZeppelin {
 	ln -s ${ZEPPELIN_TARGET}/$ZEPPELIN_RELEASE ${ZEPPELIN_TARGET}/zeppelin
 }
 
+function copyConf {
+	cp ${ZEPPELIN_RES_DIR}/zeppelin-site.xml ${ZEPPELIN_TARGET}/zeppelin/conf/.
+}
 
 echo "setup Zeppelin"
 
@@ -48,5 +51,6 @@ installZeppelin
 setupEnvVars
 setupZeppelin
 changeOwner
+copyConf
 
 echo "zeppelin setup complete"

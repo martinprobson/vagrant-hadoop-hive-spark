@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Curl options
-CURL_OPTS="--retry 10 -sS "
+CURL_OPTS="-Ss --retry 10 "
 
 # java
 JAVA_ARCHIVE=jdk-8u51-linux-x64.gz

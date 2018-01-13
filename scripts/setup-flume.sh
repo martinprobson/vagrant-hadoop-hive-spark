@@ -12,7 +12,7 @@ function installLocalFlume {
 function installRemoteFlume {
 	echo "install Flume from remote file"
 	echo $FLUME_MIRROR_DOWNLOAD
-	curl -sS -o /vagrant/resources/$FLUME_ARCHIVE -O -L $FLUME_MIRROR_DOWNLOAD
+	curl ${CURL_OPTS} -o /vagrant/resources/$FLUME_ARCHIVE -O -L $FLUME_MIRROR_DOWNLOAD
 	tar -xzf /vagrant/resources/$FLUME_ARCHIVE -C /usr/local
 }
 

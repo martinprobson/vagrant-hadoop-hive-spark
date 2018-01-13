@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Curl options
+CURL_OPTS="--retry 10 -sS "
+
 # java
 JAVA_ARCHIVE=jdk-8u51-linux-x64.gz
 JAVA_MYSQL_CONNECTOR_VERSION=5.1.40

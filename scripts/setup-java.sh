@@ -18,7 +18,7 @@ function setupEnvVars {
 
 function setupMysqlConnector {
 	echo "Mysql java connector setup"
-	curl -sS -o ${JAVA_HOME}/lib/ext/${JAVA_MYSQL_CONNECTOR_JAR} -O -L ${JAVA_MYSQL_CONNECTOR_DOWNLOAD}
+	curl ${CURL_OPTS} -o ${JAVA_HOME}/lib/ext/${JAVA_MYSQL_CONNECTOR_JAR} -O -L ${JAVA_MYSQL_CONNECTOR_DOWNLOAD}
 }
 
 function installJava {

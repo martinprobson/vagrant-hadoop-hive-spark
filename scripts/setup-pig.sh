@@ -10,7 +10,7 @@ function installLocalPig {
 
 function installRemotePig {
 	echo "install Pig from remote file"
-	curl -sS -o /vagrant/resources/$PIG_ARCHIVE -O -L $PIG_MIRROR_DOWNLOAD
+	curl ${CURL_OPTS} -o /vagrant/resources/$PIG_ARCHIVE -O -L $PIG_MIRROR_DOWNLOAD
 	tar -xzf /vagrant/resources/$PIG_ARCHIVE -C /usr/local
 }
 

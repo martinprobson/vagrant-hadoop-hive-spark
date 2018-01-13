@@ -30,7 +30,7 @@ The virtual machine will be running the following services:
 2. [Download and install Vagrant](http://www.vagrantup.com/downloads.html).
 3. Go to [releases](https://github.com/martinprobson/vagrant-hadoop-hive-spark/releases) and download and extract the latest source of this project.
 5. In your terminal change your directory into the project directory (i.e. `cd vagrant-hadoop-spark-hive-<version>`).
-6. Run ```vagrant up``` to create the VM.
+6. Run ```vagrant up``` to create the VM (**NOTE** *This will take a while the first time as many dependancies are downloaded - subsequent deployments will be quicker as dependancies are cached in the `resources` directory*).
 7. Execute ```vagrant ssh``` to login to the VM.
 
 
@@ -138,11 +138,6 @@ $ systemctl stop mysql.service
 
 Spark in particular needs quite a bit of memory to run - to work around this a `swapspace` daemon is also configured and
 started that uses normal disk to dynamically allocate swapspace when memory is low.
-
-
-# VIM
-
-A nicer version of vim is also installed, use :PluginInstall to install the plugins from within vim itself.
 
 # More advanced setup
 

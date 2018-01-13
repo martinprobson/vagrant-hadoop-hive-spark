@@ -10,7 +10,7 @@ function installLocalTez {
 
 function installRemoteTez {
 	echo "install Tez from remote file"
-	curl -sS -o /vagrant/resources/$TEZ_ARCHIVE -O -L $TEZ_MIRROR_DOWNLOAD
+	curl ${CURL_OPTS} -o /vagrant/resources/$TEZ_ARCHIVE -O -L $TEZ_MIRROR_DOWNLOAD
 	tar -xzf /vagrant/resources/$TEZ_ARCHIVE -C /usr/local
 }
 

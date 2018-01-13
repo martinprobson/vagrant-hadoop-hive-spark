@@ -10,7 +10,7 @@ function installLocalSqoop {
 
 function installRemoteSqoop {
 	echo "install sqoop from remote file"
-	curl -sS -o /vagrant/resources/$SQOOP_ARCHIVE -O -L $SQOOP_MIRROR_DOWNLOAD
+	curl ${CURL_OPTS} -o /vagrant/resources/$SQOOP_ARCHIVE -O -L $SQOOP_MIRROR_DOWNLOAD
 	tar -xzf /vagrant/resources/$SQOOP_ARCHIVE -C /usr/local
 }
 

@@ -10,7 +10,7 @@ function installLocalZeppelin {
 
 function installRemoteZeppelin {
 	echo "install apache zeppelin from remote file"
-	curl -sS -o /vagrant/resources/$ZEPPELIN_ARCHIVE -O -L $ZEPPELIN_MIRROR_DOWNLOAD
+	curl ${CURL_OPTS} -o /vagrant/resources/$ZEPPELIN_ARCHIVE -O -L $ZEPPELIN_MIRROR_DOWNLOAD
 	tar -xzf /vagrant/resources/$ZEPPELIN_ARCHIVE -C ${ZEPPELIN_TARGET}
 }
 

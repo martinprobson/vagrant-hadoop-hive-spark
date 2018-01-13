@@ -12,7 +12,7 @@ function installLocalHive {
 
 function installRemoteHive {
 	echo "install hive from remote file"
-	curl -sS -o /vagrant/resources/$HIVE_ARCHIVE -O -L $HIVE_MIRROR_DOWNLOAD
+	curl ${CURL_OPTS} -o /vagrant/resources/$HIVE_ARCHIVE -O -L $HIVE_MIRROR_DOWNLOAD
 	tar -xzf /vagrant/resources/$HIVE_ARCHIVE -C /usr/local
 }
 

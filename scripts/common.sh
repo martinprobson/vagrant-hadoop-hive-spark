@@ -49,9 +49,9 @@ VIM_RES_DIR=/vagrant/resources/vim
 MYSQL_ROOT_PASSWORD=root
 
 # sqoop 
-SQOOP_RELEASE=sqoop-1.4.6.bin__hadoop-2.0.4-alpha
+SQOOP_RELEASE=sqoop-1.4.7.bin__hadoop-2.6.0
 SQOOP_ARCHIVE=${SQOOP_RELEASE}.tar.gz
-SQOOP_MIRROR_DOWNLOAD=http://mirror.ox.ac.uk/sites/rsync.apache.org/sqoop/1.4.6/${SQOOP_ARCHIVE}
+SQOOP_MIRROR_DOWNLOAD=http://mirror.ox.ac.uk/sites/rsync.apache.org/sqoop/1.4.7/${SQOOP_ARCHIVE}
 SQOOP_RES_DIR=/vagrant/resources/sqoop
 
 # Tez

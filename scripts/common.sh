@@ -35,7 +35,9 @@ SPARK_VERSION=spark-2.3.0
 SPARK_ARCHIVE=$SPARK_VERSION-bin-hadoop2.tgz
 SPARK_MIRROR_DOWNLOAD=http://archive.apache.org/dist/spark/$SPARK_VERSION/$SPARK_VERSION-bin-hadoop2.7.tgz
 SPARK_RES_DIR=/vagrant/resources/spark
-SPARK_CONF_DIR=/usr/local/spark/conf
+SPARK_HOME=/usr/local/spark
+SPARK_CONF=${SPARK_HOME}/conf
+SPARK_CONF_DIR=${SPARK_CONF}
 
 # ssh
 SSH_RES_DIR=/vagrant/resources/ssh

@@ -5,11 +5,11 @@ Vagrant for Hadoop, Spark and Hive
 
 Vagrant project to spin up a single virtual machine running:
 
-* Hadoop 2.7.3
-* Hive 1.2.2
-* Spark 2.1.1
+* Hadoop 2.7.6
+* Hive 2.3.3
+* Spark 2.3.0
 * mysql 5.7 (for hive metastore)
-* Tez 0.8.5
+* Tez 0.9.1
 * Sqoop 1.4.6
 * Pig 0.17.0
 * flume 1.7.0

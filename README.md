@@ -5,15 +5,17 @@ Vagrant for Hadoop, Spark and Hive
 
 Vagrant project to spin up a single virtual machine running:
 
-* Hadoop 2.7.6
-* Hive 2.3.3
-* Spark 2.3.0
-* mysql 5.7 (for hive metastore)
-* Tez 0.9.1
-* Sqoop 1.4.6
-* Pig 0.17.0
-* flume 1.7.0
-* Zeppelin 0.7.2 (with Spark/scala, md, file and JDBC interpreters)
+* Hadoop 
+* Hive 
+* Spark 
+* mysql (for hive metastore)
+* Tez 
+* Sqoop 
+* Pig 
+* flume 
+* Zeppelin (with Spark/scala, md, file and JDBC interpreters)
+
+See point 3. in Getting Started for version information.
 
 The virtual machine will be running the following services:
 
@@ -28,10 +30,30 @@ The virtual machine will be running the following services:
 
 1. [Download and install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. [Download and install Vagrant](http://www.vagrantup.com/downloads.html).
-3. Go to [releases](https://github.com/martinprobson/vagrant-hadoop-hive-spark/releases) and download and extract the latest source of this project.
-5. In your terminal change your directory into the project directory (i.e. `cd vagrant-hadoop-spark-hive-<version>`).
-6. Run ```vagrant up``` to create the VM (**NOTE** *This will take a while the first time as many dependancies are downloaded - subsequent deployments will be quicker as dependancies are cached in the `resources` directory*).
-7. Execute ```vagrant ssh``` to login to the VM.
+3. Go to [releases](https://github.com/martinprobson/vagrant-hadoop-hive-spark/releases) and download and extract the release you require: -
+* Release `Spark-2.1.1` based on: -
+    * Hadoop 2.7.3
+    * Hive 1.2.2
+    * Spark 2.1.1
+    * mysql 5.7 (for hive metastore)
+    * Tez 0.8.5
+    * Sqoop 1.4.6
+    * Pig 0.17.0
+    * flume 1.7.0
+    * Zeppelin 0.7.2 (with Spark/scala, md, file and JDBC interpreters)
+* Release `Spark-2.3.0` based on: -
+    * Hadoop 2.7.6
+    * Hive 2.3.3
+    * Spark 2.3.0
+    * mysql 5.7 (for hive metastore)
+    * Tez 0.9.1
+    * Sqoop 1.4.6
+    * Pig 0.17.0
+    * flume 1.7.0
+    * Zeppelin 0.7.2 (with Spark/scala, md, file and JDBC interpreters)
+4. In your terminal change your directory into the project directory (i.e. `cd vagrant-hadoop-spark-hive-<version>`).
+5. Run ```vagrant up``` to create the VM (**NOTE** *This will take a while the first time as many dependencies are downloaded - subsequent deployments will be quicker as dependancies are cached in the `resources` directory*).
+6. Execute ```vagrant ssh``` to login to the VM.
 
 
 # Map Reduce - Tez

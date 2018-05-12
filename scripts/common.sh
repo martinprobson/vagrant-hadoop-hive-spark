@@ -10,18 +10,18 @@ JAVA_MYSQL_CONNECTOR_JAR=mysql-connector-java-${JAVA_MYSQL_CONNECTOR_VERSION}.ja
 JAVA_MYSQL_CONNECTOR_DOWNLOAD=http://central.maven.org/maven2/mysql/mysql-connector-java/${JAVA_MYSQL_CONNECTOR_VERSION}/mysql-connector-java-${JAVA_MYSQL_CONNECTOR_VERSION}.jar
 
 # hadoop
-HADOOP_PREFIX=/usr/local/hadoop
-HADOOP_CONF=$HADOOP_PREFIX/etc/hadoop
-HADOOP_VERSION=hadoop-2.7.3
+HADOOP_HOME=/usr/local/hadoop
+HADOOP_CONF=$HADOOP_HOME/etc/hadoop
+HADOOP_VERSION=hadoop-3.1.0
 HADOOP_ARCHIVE=$HADOOP_VERSION.tar.gz
 HADOOP_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hadoop/core/$HADOOP_VERSION/$HADOOP_ARCHIVE
 HADOOP_RES_DIR=/vagrant/resources/hadoop
 
 # Yarn
-HADOOP_YARN_HOME=$HADOOP_PREFIX
+HADOOP_YARN_HOME=$HADOOP_HOME
 
 # hive
-HIVE_VERSION=1.2.2
+HIVE_VERSION=2.3.3
 HIVE_ARCHIVE=apache-hive-${HIVE_VERSION}-bin.tar.gz
 HIVE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hive/hive-${HIVE_VERSION}/$HIVE_ARCHIVE
 HIVE_RES_DIR=/vagrant/resources/hive
@@ -30,7 +30,7 @@ HIVE_PREFIX=/usr/local/hive
 HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
 
 # spark
-SPARK_VERSION=spark-2.1.1
+SPARK_VERSION=spark-2.3.0
 SPARK_ARCHIVE=$SPARK_VERSION-bin-hadoop2.tgz
 SPARK_MIRROR_DOWNLOAD=http://archive.apache.org/dist/spark/$SPARK_VERSION/$SPARK_VERSION-bin-hadoop2.7.tgz
 SPARK_RES_DIR=/vagrant/resources/spark
@@ -69,7 +69,7 @@ PIG_MIRROR_DOWNLOAD=http://apache.mirror.anlx.net/pig/pig-${PIG_VERSION}/${PIG_A
 PIG_RES_DIR=/vagrant/resources/pig
 
 # flume
-FLUME_VERSION=1.7.0
+FLUME_VERSION=1.8.0
 FLUME_RELEASE=apache-flume-${FLUME_VERSION}-bin
 FLUME_ARCHIVE=${FLUME_RELEASE}.tar.gz
 FLUME_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/flume/${FLUME_VERSION}/${FLUME_ARCHIVE}
@@ -77,7 +77,7 @@ FLUME_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/flume/${
 FLUME_RES_DIR=/vagrant/resources/flume
 
 # Zeppelin 
-ZEPPELIN_VERSION=0.7.2
+ZEPPELIN_VERSION=0.7.3
 ZEPPELIN_RELEASE=zeppelin-${ZEPPELIN_VERSION}-bin-netinst
 ZEPPELIN_ARCHIVE=${ZEPPELIN_RELEASE}.tgz
 ZEPPELIN_MIRROR_DOWNLOAD=http://www-eu.apache.org/dist/zeppelin/zeppelin-${ZEPPELIN_VERSION}/${ZEPPELIN_ARCHIVE}

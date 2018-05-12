@@ -3,14 +3,18 @@
 source "/vagrant/scripts/common.sh"
 
 function stopDaemons {
-    echo "stopping Hadoop daemons"
-    $HADOOP_PREFIX/sbin/mr-jobhistory-daemon.sh stop historyserver --config $HADOOP_CONF_DIR
-    $HADOOP_YARN_HOME/sbin/yarn-daemon.sh stop proxyserver --config $HADOOP_CONF_DIR
-    $HADOOP_YARN_HOME/sbin/yarn-daemons.sh stop nodemanager --config $HADOOP_CONF_DIR 
-    $HADOOP_YARN_HOME/sbin/yarn-daemon.sh stop resourcemanager --config $HADOOP_CONF_DIR 
-    $HADOOP_PREFIX/sbin/hadoop-daemons.sh --script hdfs stop datanode --config $HADOOP_CONF_DIR 
-    $HADOOP_PREFIX/sbin/hadoop-daemon.sh --script hdfs stop namenode --config $HADOOP_CONF_DIR 
-
+    echo "stopDaemons: stopping historyserver"
+    $HADOOP_HOME/bin/mapred --config $HADOOP_CONF --daemon stop historyserver
+    echo "stopDaemons: stopping proxyserver"
+    $HADOOP_YARN_HOME/bin/yarn --config $HADOOP_CONF --daemon stop proxyserver
+    echo "stopDaemons: stopping nodemanager"
+    $HADOOP_YARN_HOME/bin/yarn --config $HADOOP_CONF --daemon stop nodemanager
+    echo "stopDaemons: stopping resourcemanager"
+    $HADOOP_YARN_HOME/bin/yarn --config $HADOOP_CONF --daemon stop resourcemanager
+    echo "stopDaemons: stopping datanode"
+    $HADOOP_HOME/bin/hdfs --config $HADOOP_CONF --daemon stop datanode
+    echo "stopDaemons: stopping namenode"
+    $HADOOP_HOME/bin/hdfs --config $HADOOP_CONF --daemon stop namenode
     echo "listing all Java processes"
     jps
 }

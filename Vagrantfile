@@ -24,11 +24,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.provision :shell, path: 'scripts/setup-hive.sh'
         node.vm.provision :shell, path: 'scripts/setup-spark.sh'
         node.vm.provision :shell, path: 'scripts/setup-tez.sh'
-        node.vm.provision :shell, path: 'scripts/setup-pig.sh'
-        node.vm.provision :shell, path: 'scripts/setup-flume.sh'
-        node.vm.provision :shell, path: 'scripts/setup-sqoop.sh'
-        node.vm.provision :shell, path: 'scripts/setup-zeppelin.sh'
-        node.vm.provision :shell, path: 'scripts/finalize-ubuntu.sh'
-        node.vm.provision :shell, path: 'scripts/bootstrap.sh', run: 'always'
+#        node.vm.provision :shell, path: 'scripts/setup-pig.sh'
+#        node.vm.provision :shell, path: 'scripts/setup-flume.sh'
+#        node.vm.provision :shell, path: 'scripts/setup-sqoop.sh'
+#        node.vm.provision :shell, path: 'scripts/setup-zeppelin.sh'
+#        node.vm.provision :shell, path: 'scripts/finalize-ubuntu.sh'
+#        node.vm.provision :shell, path: 'scripts/bootstrap.sh', run: 'always'
     end
 end

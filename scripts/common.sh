@@ -12,7 +12,7 @@ JAVA_MYSQL_CONNECTOR_DOWNLOAD=http://central.maven.org/maven2/mysql/mysql-connec
 # hadoop
 HADOOP_PREFIX=/usr/local/hadoop
 HADOOP_CONF=$HADOOP_PREFIX/etc/hadoop
-HADOOP_VERSION=hadoop-2.7.3
+HADOOP_VERSION=hadoop-2.7.6
 HADOOP_ARCHIVE=$HADOOP_VERSION.tar.gz
 HADOOP_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hadoop/core/$HADOOP_VERSION/$HADOOP_ARCHIVE
 HADOOP_RES_DIR=/vagrant/resources/hadoop
@@ -21,7 +21,8 @@ HADOOP_RES_DIR=/vagrant/resources/hadoop
 HADOOP_YARN_HOME=$HADOOP_PREFIX
 
 # hive
-HIVE_VERSION=1.2.2
+#HIVE_VERSION=1.2.2
+HIVE_VERSION=2.3.3
 HIVE_ARCHIVE=apache-hive-${HIVE_VERSION}-bin.tar.gz
 HIVE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hive/hive-${HIVE_VERSION}/$HIVE_ARCHIVE
 HIVE_RES_DIR=/vagrant/resources/hive
@@ -30,7 +31,7 @@ HIVE_PREFIX=/usr/local/hive
 HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
 
 # spark
-SPARK_VERSION=spark-2.1.1
+SPARK_VERSION=spark-2.3.0
 SPARK_ARCHIVE=$SPARK_VERSION-bin-hadoop2.tgz
 SPARK_MIRROR_DOWNLOAD=http://archive.apache.org/dist/spark/$SPARK_VERSION/$SPARK_VERSION-bin-hadoop2.7.tgz
 SPARK_RES_DIR=/vagrant/resources/spark
@@ -55,7 +56,8 @@ SQOOP_MIRROR_DOWNLOAD=http://mirror.ox.ac.uk/sites/rsync.apache.org/sqoop/1.4.7/
 SQOOP_RES_DIR=/vagrant/resources/sqoop
 
 # Tez
-TEZ_VERSION=0.8.5
+#TEZ_VERSION=0.8.5
+TEZ_VERSION=0.9.1
 TEZ_RELEASE=apache-tez-${TEZ_VERSION}-bin
 TEZ_ARCHIVE=${TEZ_RELEASE}.tar.gz
 TEZ_MIRROR_DOWNLOAD=http://mirror.catn.com/pub/apache/tez/${TEZ_VERSION}/${TEZ_ARCHIVE}

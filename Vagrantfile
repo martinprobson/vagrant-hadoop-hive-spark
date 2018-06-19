@@ -7,6 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     i = 1
     config.vm.network :forwarded_port, guest: 8080, host: 8080
     config.vm.network :forwarded_port, guest: 9083, host: 9083
+    config.vm.network :forwarded_port, guest: 4040, host: 4040
     config.vm.define "node#{i}" do |node|
         node.vm.box = 'ubuntu/xenial64'
         config.vm.define :node1 do |t|

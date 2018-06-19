@@ -49,7 +49,8 @@ function setupMysql {
 	echo "grant permissions to hive meta-db user..."
 	echo "GRANT ALL PRIVILEGES ON hive_metastore.* TO 'hive'@'%' IDENTIFIED BY 'hive';" | mysql -u root -P 3306 -p${MYSQL_ROOT_PASSWORD}
 	echo "Restarting mysqld for changes to take effect..."
-	systemctl restart mysql.service
+#	systemctl restart mysql.service
+	service mysql restart
 	echo "setup of mysql finished"
 }
 

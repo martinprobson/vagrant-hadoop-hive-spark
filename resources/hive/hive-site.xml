@@ -4,20 +4,20 @@
 <configuration>
     <property>
         <name>hive.metastore.uris</name>
-        <value>thrift://127.0.0.1:9083</value>
+        <value>thrift://node1:9083</value>
         <description>IP address (or fully-qualified domain name) and port of the metastore host</description>
     </property>
 
-    <!--    <property>
+    <property>
         <name>javax.jdo.option.ConnectionURL</name>
         <value>jdbc:derby:;databaseName=/usr/local/hive/derby/metastore_db;create=true</value>
         <description>JDBC connect string for a JDBC metastore</description>
-    </property> -->
-    <property>
+    </property>
+    <!-- <property>
         <name>javax.jdo.option.ConnectionURL</name>
 	<value>jdbc:mysql://node1/hive_metastore?createDatabaseIfNotExist=true</value>
         <description>JDBC connect string for a JDBC metastore</description>
-    </property>
+    </property> -->
     <property>
         <name>javax.jdo.option.ConnectionUserName</name>
 	<value>hive</value>

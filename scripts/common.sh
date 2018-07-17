@@ -81,7 +81,7 @@ FLUME_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/flume/${
 FLUME_RES_DIR=/vagrant/resources/flume
 
 # Zeppelin 
-ZEPPELIN_VERSION=0.7.2
+ZEPPELIN_VERSION=0.8.0
 ZEPPELIN_RELEASE=zeppelin-${ZEPPELIN_VERSION}-bin-netinst
 ZEPPELIN_ARCHIVE=${ZEPPELIN_RELEASE}.tgz
 ZEPPELIN_MIRROR_DOWNLOAD=http://www-eu.apache.org/dist/zeppelin/zeppelin-${ZEPPELIN_VERSION}/${ZEPPELIN_ARCHIVE}

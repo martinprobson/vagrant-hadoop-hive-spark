@@ -40,7 +40,7 @@ The virtual machine will be running the following services:
     * Sqoop 1.4.6
     * Pig 0.17.0
     * flume 1.7.0
-    * Zeppelin 0.7.2 (with Spark/scala, md, file and JDBC interpreters)
+    * Zeppelin 0.8.0 (with Spark/scala, md, file and JDBC interpreters)
 * Release `Spark-2.3.0` based on: -
     * Hadoop 2.7.6
     * Hive 2.3.3
@@ -50,7 +50,7 @@ The virtual machine will be running the following services:
     * Sqoop 1.4.6
     * Pig 0.17.0
     * flume 1.7.0
-    * Zeppelin 0.7.2 (with Spark/scala, md, file and JDBC interpreters)
+    * Zeppelin 0.8.0 (with Spark/scala, md, file and JDBC interpreters)
 4. In your terminal change your directory into the project directory (i.e. `cd vagrant-hadoop-spark-hive-<version>`).
 5. Run ```vagrant up``` to create the VM (**NOTE** *This will take a while the first time as many dependencies are downloaded - subsequent deployments will be quicker as dependancies are cached in the `resources` directory*).
 6. Execute ```vagrant ssh``` to login to the VM.

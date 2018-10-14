@@ -30,6 +30,15 @@ HIVE_CONF=/usr/local/hive/conf
 HIVE_PREFIX=/usr/local/hive
 HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
 
+# HBase
+HBASE_VERSION=1.4.8
+HBASE_ARCHIVE=hbase-${HBASE_VERSION}-bin.tar.gz
+HBASE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hbase/${HBASE_VERSION}/$HBASE_ARCHIVE
+HBASE_RES_DIR=/vagrant/resources/hbase
+HBASE_CONF=/usr/local/hbase/conf
+HBASE_PREFIX=/usr/local/hbase
+#HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
+
 # spark
 SPARK_VERSION=spark-2.3.0
 SPARK_ARCHIVE=$SPARK_VERSION-bin-hadoop2.tgz

@@ -5,10 +5,9 @@ source "/vagrant/scripts/common.sh"
 
 function setupHosts {
 	echo "modifying /etc/hosts file"
-        echo "10.211.55.101 node1" >> /etc/nhosts
+        echo "127.0.0.1 node1" >> /etc/nhosts
 	echo "127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4" >> /etc/nhosts
 	echo "::1         localhost localhost.localdomain localhost6 localhost6.localdomain6" >> /etc/nhosts
-	#cat /etc/hosts >> /etc/nhosts
 	cp /etc/nhosts /etc/hosts
 	rm -f /etc/nhosts
 }
@@ -42,6 +41,7 @@ function setupUtilities {
     apt-get install -y ant
     apt-get install -y unzip
     apt-get install -y python-minimal
+    apt-get install -y curl apt-utils
 }
 
 echo "setup ubuntu"

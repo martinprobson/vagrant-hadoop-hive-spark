@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <configuration>
     <property>
+        <name>yarn.resourcemanager.webapp.address</name>
+        <value>0.0.0.0:8088</value>
+    </property>
+    <property>
         <name>yarn.nodemanager.aux-services</name>
         <value>mapreduce_shuffle</value>
     </property>
@@ -10,23 +14,23 @@
     </property>
     <property>
         <name>mapreduce.jobhistory.address</name>
-        <value>10.211.55.101:10020</value>
+        <value>node1:10020</value>
     </property>
     <property>
         <name>mapreduce.jobhistory.webapp.address</name>
-        <value>10.211.55.101:19888</value>
+        <value>node1:19888</value>
     </property>
     <property>
         <name>yarn.log.server.url</name>
-        <value>http://10.211.55.101:19888/jobhistory/logs/</value>
+        <value>http://node1:19888/jobhistory/logs/</value>
     </property>
     <property>
         <name>yarn.resourcemanager.hostname</name>
-        <value>10.211.55.101</value>
+        <value>node1</value>
     </property>
     <property>
         <name>yarn.timeline-service.hostname</name>
-        <value>10.211.55.101</value>
+        <value>node1</value>
     </property>
     <property>
         <name>yarn.nodemanager.delete.debug-delay-sec</name>

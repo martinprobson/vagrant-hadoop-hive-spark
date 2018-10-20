@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#
+# Version information is defined the versions.sh file
+#
+source "/vagrant/scripts/versions.sh"
+
 # Curl options
 CURL_OPTS="-Ss --retry 10 "
 
@@ -12,7 +17,6 @@ JAVA_MYSQL_CONNECTOR_DOWNLOAD=http://central.maven.org/maven2/mysql/mysql-connec
 # hadoop
 HADOOP_PREFIX=/usr/local/hadoop
 HADOOP_CONF=$HADOOP_PREFIX/etc/hadoop
-HADOOP_VERSION=hadoop-2.7.3
 HADOOP_ARCHIVE=$HADOOP_VERSION.tar.gz
 HADOOP_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hadoop/core/$HADOOP_VERSION/$HADOOP_ARCHIVE
 HADOOP_RES_DIR=/vagrant/resources/hadoop
@@ -21,7 +25,6 @@ HADOOP_RES_DIR=/vagrant/resources/hadoop
 HADOOP_YARN_HOME=$HADOOP_PREFIX
 
 # hive
-HIVE_VERSION=1.2.2
 HIVE_ARCHIVE=apache-hive-${HIVE_VERSION}-bin.tar.gz
 HIVE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hive/hive-${HIVE_VERSION}/$HIVE_ARCHIVE
 HIVE_RES_DIR=/vagrant/resources/hive
@@ -29,12 +32,21 @@ HIVE_CONF=/usr/local/hive/conf
 HIVE_PREFIX=/usr/local/hive
 HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
 
+# HBase
+HBASE_ARCHIVE=hbase-${HBASE_VERSION}-bin.tar.gz
+HBASE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hbase/${HBASE_VERSION}/$HBASE_ARCHIVE
+HBASE_RES_DIR=/vagrant/resources/hbase
+HBASE_CONF=/usr/local/hbase/conf
+HBASE_PREFIX=/usr/local/hbase
+#HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
+
 # spark
-SPARK_VERSION=spark-2.1.1
 SPARK_ARCHIVE=$SPARK_VERSION-bin-hadoop2.tgz
 SPARK_MIRROR_DOWNLOAD=http://archive.apache.org/dist/spark/$SPARK_VERSION/$SPARK_VERSION-bin-hadoop2.7.tgz
 SPARK_RES_DIR=/vagrant/resources/spark
-SPARK_CONF_DIR=/usr/local/spark/conf
+SPARK_HOME=/usr/local/spark
+SPARK_CONF=${SPARK_HOME}/conf
+SPARK_CONF_DIR=${SPARK_CONF}
 
 # ssh
 SSH_RES_DIR=/vagrant/resources/ssh
@@ -49,27 +61,23 @@ VIM_RES_DIR=/vagrant/resources/vim
 MYSQL_ROOT_PASSWORD=root
 
 # sqoop 
-SQOOP_RELEASE=sqoop-1.4.7.bin__hadoop-2.6.0
 SQOOP_ARCHIVE=${SQOOP_RELEASE}.tar.gz
 SQOOP_MIRROR_DOWNLOAD=http://mirror.ox.ac.uk/sites/rsync.apache.org/sqoop/1.4.7/${SQOOP_ARCHIVE}
 SQOOP_RES_DIR=/vagrant/resources/sqoop
 
 # Tez
-TEZ_VERSION=0.8.5
 TEZ_RELEASE=apache-tez-${TEZ_VERSION}-bin
 TEZ_ARCHIVE=${TEZ_RELEASE}.tar.gz
 TEZ_MIRROR_DOWNLOAD=http://mirror.catn.com/pub/apache/tez/${TEZ_VERSION}/${TEZ_ARCHIVE}
 TEZ_RES_DIR=/vagrant/resources/tez
 
 # Pig
-PIG_VERSION=0.17.0
 PIG_RELEASE=pig-${PIG_VERSION}
 PIG_ARCHIVE=${PIG_RELEASE}.tar.gz
 PIG_MIRROR_DOWNLOAD=http://apache.mirror.anlx.net/pig/pig-${PIG_VERSION}/${PIG_ARCHIVE}
 PIG_RES_DIR=/vagrant/resources/pig
 
 # flume
-FLUME_VERSION=1.7.0
 FLUME_RELEASE=apache-flume-${FLUME_VERSION}-bin
 FLUME_ARCHIVE=${FLUME_RELEASE}.tar.gz
 FLUME_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/flume/${FLUME_VERSION}/${FLUME_ARCHIVE}
@@ -77,7 +85,6 @@ FLUME_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/flume/${
 FLUME_RES_DIR=/vagrant/resources/flume
 
 # Zeppelin 
-ZEPPELIN_VERSION=0.7.2
 ZEPPELIN_RELEASE=zeppelin-${ZEPPELIN_VERSION}-bin-netinst
 ZEPPELIN_ARCHIVE=${ZEPPELIN_RELEASE}.tgz
 ZEPPELIN_MIRROR_DOWNLOAD=http://www-eu.apache.org/dist/zeppelin/zeppelin-${ZEPPELIN_VERSION}/${ZEPPELIN_ARCHIVE}

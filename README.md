@@ -13,7 +13,7 @@ Vagrant project to spin up a single virtual machine running:
 * Sqoop 1.4.6
 * Pig 0.17.0
 * flume 1.7.0
-* Zeppelin 0.7.2 (with Spark/scala, md, file and JDBC interpreters)
+* Zeppelin 0.8.0 (with Spark/scala, md, file and JDBC interpreters)
 
 The virtual machine will be running the following services:
 

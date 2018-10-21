@@ -30,6 +30,7 @@
 
 # Vagrant #
 ###########
+/.vagrant
 .vagrant
 
 # Editors #

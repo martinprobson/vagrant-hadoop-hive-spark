@@ -165,6 +165,15 @@ $ /vagrant/scripts/stop-hadoop.sh
 Spark in particular needs quite a bit of memory to run - to work around this a `swapspace` daemon is also configured and
 started that uses normal disk to dynamically allocate swapspace when memory is low.
 
+# Problems
+Sometimes the Spark UI is not available from the host machine when running with virtualbox. Setting: -
+
+```bash
+ export SPARK_LOCAL_IP=10.211.55.101
+ spark-shell .....
+```
+Seems to solve this.
+
 # More advanced setup
 
 If you'd like to learn more about working and optimizing Vagrant then

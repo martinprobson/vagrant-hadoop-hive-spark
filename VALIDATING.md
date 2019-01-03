@@ -46,7 +46,7 @@ Create a table and run a query over it.
         count INT
     )
     ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
-    LOCATION '/user/ubuntu/wordcount-output';
+    LOCATION '/wordcount-output';
 
     select * from wordcount order by count;
 

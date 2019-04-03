@@ -28,5 +28,5 @@ function installJava {
 echo "setup java"
 installJava
 setupEnvVars
-setupMysqlConnector
+#setupMysqlConnector
 

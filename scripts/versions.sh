@@ -11,22 +11,12 @@ HIVE_VERSION=2.3.3
 
 # HBase
 HBASE_VERSION=1.4.8
+HBASE_MAJOR_VERSION=1.4
+
+# apache phoenix
+PHOENIX_VERSION=4.14.1-HBase-${HBASE_MAJOR_VERSION}
 
 # spark
 SPARK_VERSION=spark-2.3.0
 
 
-# sqoop 
-SQOOP_RELEASE=sqoop-1.4.7.bin__hadoop-2.6.0
-
-# Tez
-TEZ_VERSION=0.9.1
-
-# Pig
-PIG_VERSION=0.17.0
-
-# flume
-FLUME_VERSION=1.7.0
-
-# Zeppelin 
-ZEPPELIN_VERSION=0.8.0

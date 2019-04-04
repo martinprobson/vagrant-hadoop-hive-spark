@@ -37,4 +37,10 @@
 		<name>hbase.cluster.distributed</name>
 		<value>true</value>
 	</property>
+	<!-- Following property added to allow secondary index support in Phoenix 
+	see https://phoenix.apache.org/secondary_indexing.html -->
+	<property>
+		<name>hbase.regionserver.wal.codec</name>
+		<value>org.apache.hadoop.hbase.regionserver.wal.IndexedWALEditCodec</value>
+	</property>
 </configuration>

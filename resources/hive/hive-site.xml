@@ -8,16 +8,51 @@
         <description>IP address (or fully-qualified domain name) and port of the metastore host</description>
     </property>
 
-    <property>
+    <!--<property>
         <name>javax.jdo.option.ConnectionURL</name>
         <value>jdbc:derby:;databaseName=/usr/local/hive/derby/metastore_db;create=true</value>
         <description>JDBC connect string for a JDBC metastore</description>
-    </property>
-    <!-- <property>
+    </property> -->
+<!-- Martin 25/07/2019 -->
+    <property>
         <name>javax.jdo.option.ConnectionURL</name>
 	<value>jdbc:mysql://node1/hive_metastore?createDatabaseIfNotExist=true</value>
         <description>JDBC connect string for a JDBC metastore</description>
-    </property> -->
+    </property>
+    <property>
+	    <name>hive.metastore.warehouse.dir</name>
+	    <value>/user/hive/warehouse</value>
+    </property>
+    <property>
+	    <name>hive.exec.scratchdir</name>
+	    <value>/tmp</value>
+    </property>
+    <!-- Add ACID support -->
+    <property>
+	    <name>hive.support.concurrency</name>
+	    <value>true</value>
+    </property>
+    <property>
+	    <name>hive.enforce.bucketing</name>
+	    <value>true</value>
+    </property>
+    <property>
+	    <name>hive.exec.dynamic.partition.mode</name>
+	    <value>nonstrict</value>
+    </property>
+    <property>
+	    <name>hive.txn.manager</name>
+	    <value>org.apache.hadoop.hive.ql.lockmge.DbTxnManager</value>
+    </property>
+    <property>
+	    <name>hive.compactor.initiator.on</name>
+	    <value>true</value>
+    </property>
+    <property>
+	    <name>hive.compactor.worker.threads</name>
+	    <value>1</value>
+    </property>
+<!-- Martin 25/07/2019  End -->
     <property>
         <name>javax.jdo.option.ConnectionUserName</name>
 	<value>hive</value>

@@ -26,7 +26,6 @@ HADOOP_RES_DIR=/vagrant/resources/hadoop
 HADOOP_YARN_HOME=$HADOOP_HOME
 
 # hive
-HIVE_VERSION=2.3.3
 HIVE_ARCHIVE=apache-hive-${HIVE_VERSION}-bin.tar.gz
 HIVE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hive/hive-${HIVE_VERSION}/$HIVE_ARCHIVE
 HIVE_RES_DIR=/vagrant/resources/hive
@@ -43,7 +42,6 @@ HBASE_PREFIX=/usr/local/hbase
 #HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
 
 # spark
-SPARK_VERSION=spark-2.3.0
 SPARK_ARCHIVE=$SPARK_VERSION-bin-hadoop2.tgz
 SPARK_MIRROR_DOWNLOAD=http://archive.apache.org/dist/spark/$SPARK_VERSION/$SPARK_VERSION-bin-hadoop2.7.tgz
 SPARK_RES_DIR=/vagrant/resources/spark
@@ -63,33 +61,13 @@ VIM_RES_DIR=/vagrant/resources/vim
 # root password for mysql
 MYSQL_ROOT_PASSWORD=root
 
-# sqoop 
-SQOOP_ARCHIVE=${SQOOP_RELEASE}.tar.gz
-SQOOP_MIRROR_DOWNLOAD=http://mirror.ox.ac.uk/sites/rsync.apache.org/sqoop/1.4.7/${SQOOP_ARCHIVE}
-SQOOP_RES_DIR=/vagrant/resources/sqoop
-
 # Tez
 TEZ_RELEASE=apache-tez-${TEZ_VERSION}-bin
 TEZ_ARCHIVE=${TEZ_RELEASE}.tar.gz
 TEZ_MIRROR_DOWNLOAD=http://mirror.catn.com/pub/apache/tez/${TEZ_VERSION}/${TEZ_ARCHIVE}
 TEZ_RES_DIR=/vagrant/resources/tez
 
-# Pig
-PIG_RELEASE=pig-${PIG_VERSION}
-PIG_ARCHIVE=${PIG_RELEASE}.tar.gz
-PIG_MIRROR_DOWNLOAD=http://apache.mirror.anlx.net/pig/pig-${PIG_VERSION}/${PIG_ARCHIVE}
-PIG_RES_DIR=/vagrant/resources/pig
-
-# flume
-FLUME_VERSION=1.8.0
-FLUME_RELEASE=apache-flume-${FLUME_VERSION}-bin
-FLUME_ARCHIVE=${FLUME_RELEASE}.tar.gz
-FLUME_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/flume/${FLUME_VERSION}/${FLUME_ARCHIVE}
-#FLUME_MIRROR_DOWNLOAD=http://apache.mirror.anlx.net/flume/${FLUME_VERSION}/${FLUME_ARCHIVE}
-FLUME_RES_DIR=/vagrant/resources/flume
-
 # Zeppelin 
-ZEPPELIN_VERSION=0.8.0
 ZEPPELIN_RELEASE=zeppelin-${ZEPPELIN_VERSION}-bin-netinst
 ZEPPELIN_ARCHIVE=${ZEPPELIN_RELEASE}.tgz
 ZEPPELIN_MIRROR_DOWNLOAD=http://www-eu.apache.org/dist/zeppelin/zeppelin-${ZEPPELIN_VERSION}/${ZEPPELIN_ARCHIVE}

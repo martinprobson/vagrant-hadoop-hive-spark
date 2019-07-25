@@ -4,29 +4,19 @@
 # Define version information for the component software
 #
 # hadoop
-HADOOP_VERSION=hadoop-2.7.6
+HADOOP_VERSION=hadoop-3.1.2
 
 # hive
-HIVE_VERSION=2.3.3
+HIVE_VERSION=3.1.0
 
 # HBase
-HBASE_VERSION=1.4.8
+HBASE_VERSION=2.0.2
 
 # spark
-SPARK_VERSION=spark-2.3.0
-
-
-# sqoop 
-SQOOP_RELEASE=sqoop-1.4.7.bin__hadoop-2.6.0
+SPARK_VERSION=spark-2.3.2
 
 # Tez
-TEZ_VERSION=0.9.1
-
-# Pig
-PIG_VERSION=0.17.0
-
-# flume
-FLUME_VERSION=1.7.0
+TEZ_VERSION=0.9.2
 
 # Zeppelin 
 ZEPPELIN_VERSION=0.8.0

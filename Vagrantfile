@@ -30,26 +30,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.provision :shell, path: 'scripts/setup-ubuntu.sh'
         node.vm.provision :shell, path: 'scripts/setup-java.sh'
         node.vm.provision :shell, path: 'scripts/setup-hadoop.sh'
-        #node.vm.provision :shell, path: 'scripts/setup-hive.sh'
+        node.vm.provision :shell, path: 'scripts/setup-hive.sh'
         node.vm.provision :shell, path: 'scripts/setup-spark.sh'
-<<<<<<< HEAD
         node.vm.provision :shell, path: 'scripts/setup-tez.sh'
-#        node.vm.provision :shell, path: 'scripts/setup-pig.sh'
-#        node.vm.provision :shell, path: 'scripts/setup-flume.sh'
-#        node.vm.provision :shell, path: 'scripts/setup-sqoop.sh'
 #        node.vm.provision :shell, path: 'scripts/setup-zeppelin.sh'
 #        node.vm.provision :shell, path: 'scripts/finalize-ubuntu.sh'
 #        node.vm.provision :shell, path: 'scripts/bootstrap.sh', run: 'always'
-=======
-        #node.vm.provision :shell, path: 'scripts/setup-tez.sh'
+        node.vm.provision :shell, path: 'scripts/setup-tez.sh'
 	# Optional components - uncomment to include
-        #node.vm.provision :shell, path: 'scripts/setup-hbase.sh'
-        #node.vm.provision :shell, path: 'scripts/setup-pig.sh'
-        #node.vm.provision :shell, path: 'scripts/setup-flume.sh'
-        #node.vm.provision :shell, path: 'scripts/setup-sqoop.sh'
+        node.vm.provision :shell, path: 'scripts/setup-hbase.sh'
         #node.vm.provision :shell, path: 'scripts/setup-zeppelin.sh'
         node.vm.provision :shell, path: 'scripts/finalize-ubuntu.sh'
         node.vm.provision :shell, path: 'scripts/bootstrap.sh', run: 'always'
->>>>>>> master
     end
 end

@@ -51,3 +51,5 @@ Thumbs.db
 # Misc
 /deploy
 metastore_db
+# Vim swap files
+*.swp

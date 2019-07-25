@@ -8,7 +8,7 @@
         <description>IP address (or fully-qualified domain name) and port of the metastore host</description>
     </property>
 
-    <!--<property>
+    <!--    <property>
         <name>javax.jdo.option.ConnectionURL</name>
         <value>jdbc:derby:;databaseName=/usr/local/hive/derby/metastore_db;create=true</value>
         <description>JDBC connect string for a JDBC metastore</description>
@@ -18,6 +18,10 @@
         <name>javax.jdo.option.ConnectionURL</name>
 	<value>jdbc:mysql://node1/hive_metastore?createDatabaseIfNotExist=true</value>
         <description>JDBC connect string for a JDBC metastore</description>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+	<value>com.mysql.jdbc.Driver</value>
     </property>
     <property>
 	    <name>hive.metastore.warehouse.dir</name>
@@ -33,16 +37,12 @@
 	    <value>true</value>
     </property>
     <property>
-	    <name>hive.enforce.bucketing</name>
-	    <value>true</value>
-    </property>
-    <property>
 	    <name>hive.exec.dynamic.partition.mode</name>
 	    <value>nonstrict</value>
     </property>
     <property>
 	    <name>hive.txn.manager</name>
-	    <value>org.apache.hadoop.hive.ql.lockmge.DbTxnManager</value>
+	    <value>org.apache.hadoop.hive.ql.lockmgr.DbTxnManager</value>
     </property>
     <property>
 	    <name>hive.compactor.initiator.on</name>

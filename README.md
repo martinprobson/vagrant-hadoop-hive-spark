@@ -1,6 +1,13 @@
 Vagrant Docker for Hadoop, Spark and Hive
 =========================================
 
+# WIP Hadoop 3.1 branch
+
+* Upgrading to Hadoop 3.1 (WIP)
+* Attempting to turn on Hive transactional support: -
+	* This requires mysql so virtualbox must be used, not docker.
+	* The Hive schema created automatically upon first connect is wrong, the correct one (that includes TXN table support) is in the Hive directory and must be run prior to using Hive Txns.
+
 # Introduction
 
 Vagrant project to spin up a single virtual machine running:

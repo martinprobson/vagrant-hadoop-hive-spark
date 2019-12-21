@@ -31,8 +31,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.provision :shell, path: 'scripts/setup-java.sh'
         node.vm.provision :shell, path: 'scripts/setup-hadoop.sh'
         node.vm.provision :shell, path: 'scripts/setup-spark.sh'
-        node.vm.provision :shell, path: 'scripts/setup-hbase.sh'
-        node.vm.provision :shell, path: 'scripts/setup-phoenix.sh'
         node.vm.provision :shell, path: 'scripts/finalize-ubuntu.sh'
         node.vm.provision :shell, path: 'scripts/bootstrap.sh', run: 'always'
     end

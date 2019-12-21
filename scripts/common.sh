@@ -24,22 +24,6 @@ HADOOP_RES_DIR=/vagrant/resources/hadoop
 # Yarn
 HADOOP_YARN_HOME=$HADOOP_PREFIX
 
-# HBase
-HBASE_ARCHIVE=hbase-${HBASE_VERSION}-bin.tar.gz
-HBASE_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hbase/${HBASE_VERSION}/$HBASE_ARCHIVE
-HBASE_RES_DIR=/vagrant/resources/hbase
-HBASE_CONF=/usr/local/hbase/conf
-HBASE_PREFIX=/usr/local/hbase
-#HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
-
-# Phoenix
-PHOENIX_BASE_NAME=apache-phoenix-${PHOENIX_VERSION}
-PHOENIX_ARCHIVE=${PHOENIX_BASE_NAME}-bin.tar.gz
-PHOENIX_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/phoenix/${PHOENIX_BASE_NAME}/bin/${PHOENIX_ARCHIVE}
-PHOENIX_RES_DIR=/vagrant/resources/phoenix
-PHOENIX_SERVER_JAR=/usr/local/phoenix/phoenix-${PHOENIX_VERSION}-server.jar
-
-
 # spark
 SPARK_ARCHIVE=$SPARK_VERSION-bin-hadoop2.tgz
 SPARK_MIRROR_DOWNLOAD=http://archive.apache.org/dist/spark/$SPARK_VERSION/$SPARK_VERSION-bin-hadoop2.7.tgz
@@ -56,10 +40,6 @@ RES_SSH_CONFIG=$SSH_RES_DIR/config
 
 # vim
 VIM_RES_DIR=/vagrant/resources/vim
-
-# root password for mysql
-MYSQL_ROOT_PASSWORD=root
-
 
 # Utility functions
 function resourceExists {

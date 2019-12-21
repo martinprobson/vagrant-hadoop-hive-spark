@@ -1,0 +1,6 @@
+( sc.textFile("names")
+  .map(name => (name.charAt(0),name) )
+  .groupByKey()
+  .mapValues(names => names.toSet.size)
+  .collect()
+  )

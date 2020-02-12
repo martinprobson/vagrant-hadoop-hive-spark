@@ -7,7 +7,7 @@ CURL_OPTS="-Ss --retry 10 "
 JAVA_ARCHIVE=jdk-8u51-linux-x64.gz
 JAVA_MYSQL_CONNECTOR_VERSION=5.1.40
 JAVA_MYSQL_CONNECTOR_JAR=mysql-connector-java-${JAVA_MYSQL_CONNECTOR_VERSION}.jar
-JAVA_MYSQL_CONNECTOR_DOWNLOAD=http://central.maven.org/maven2/mysql/mysql-connector-java/${JAVA_MYSQL_CONNECTOR_VERSION}/mysql-connector-java-${JAVA_MYSQL_CONNECTOR_VERSION}.jar
+JAVA_MYSQL_CONNECTOR_DOWNLOAD=https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/${JAVA_MYSQL_CONNECTOR_VERSION}/mysql-connector-java-${JAVA_MYSQL_CONNECTOR_VERSION}.jar
 
 # hadoop
 HADOOP_PREFIX=/usr/local/hadoop

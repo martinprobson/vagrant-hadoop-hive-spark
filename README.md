@@ -6,9 +6,9 @@ Vagrant Docker for Hadoop, Spark, HBase and Apache Phoenix
 Vagrant project to spin up a single virtual machine running:
 
 * Hadoop (2.7.6)
-* HBase (1.4.8)
-* Spark  (2.3.0)
-* Apache Phoenix (4.14)
+* HBase (2.0.5)
+* Spark  (3.0.0-preview)
+* Apache Phoenix (5.0.0)
 
 # Version Information
 The versions of the above components that the VM is provisioned with are defined in the file `scripts/versions.sh`

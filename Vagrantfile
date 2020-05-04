@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provider "docker" do |d|
 	    d.image = "nishidayuya/docker-vagrant-ubuntu:xenial"
 	    d.has_ssh = true
-	    d.ports = ["8088:8088","8080:8080","9083:9083","4040:4040","8888:8888","16010:16010"]
+	    d.ports = ["8086:8086","8088:8088","8080:8080","9083:9083","4040:4040","8888:8888","16010:16010"]
     end
     config.vm.provider "virtualbox" do |v, override|
 	    override.vm.box = "ubuntu/xenial64"
@@ -23,6 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.network "forwarded_port", guest: 9083, host: 9083
     config.vm.network "forwarded_port", guest: 4040, host: 4040
     config.vm.network "forwarded_port", guest: 18888, host: 18888
+    config.vm.network "forwarded_port", guest: 8086, host: 8086
     config.vm.network "forwarded_port", guest: 16010, host: 16010
     config.vm.define "node1" do |node|
         node.vm.network :private_network, ip: '10.211.55.101'

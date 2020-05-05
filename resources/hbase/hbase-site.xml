@@ -43,4 +43,14 @@
 		<name>hbase.regionserver.wal.codec</name>
 		<value>org.apache.hadoop.hbase.regionserver.wal.IndexedWALEditCodec</value>
 	</property>
+	<!-- Enable HTrace support (trace to local file only 
+	see https://archive.cloudera.com/cdh5/cdh/5/hbase-0.98.6-cdh5.3.4/book/tracing.html -->
+	<property>
+		<name>hbase.trace.spanreceiver.classes</name>
+		<value>org.apache.htrace.impl.StandardOutSpanReceiver</value>
+	</property>
+	<property>
+		<name>hbase.local-file-span-receiver.path</name>
+		<value>/usr/local/hbase/logs/htrace.out</value>
+	</property>
 </configuration>

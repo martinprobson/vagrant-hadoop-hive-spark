@@ -69,7 +69,7 @@ SQOOP_RES_DIR=/vagrant/resources/sqoop
 # Tez
 TEZ_RELEASE=apache-tez-${TEZ_VERSION}-bin
 TEZ_ARCHIVE=${TEZ_RELEASE}.tar.gz
-TEZ_MIRROR_DOWNLOAD=http://mirror.catn.com/pub/apache/tez/${TEZ_VERSION}/${TEZ_ARCHIVE}
+TEZ_MIRROR_DOWNLOAD=https://downloads.apache.org/tez/${TEZ_VERSION}/${TEZ_ARCHIVE}
 TEZ_RES_DIR=/vagrant/resources/tez
 
 # Pig

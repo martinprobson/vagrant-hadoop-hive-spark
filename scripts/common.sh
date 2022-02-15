@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Curl options
-CURL_OPTS="-Ss --retry 10 "
+CURL_OPTS="-Ss --retry 10 --insecure"
 
 # java
 JAVA_ARCHIVE=jdk-8u51-linux-x64.gz
 JAVA_MYSQL_CONNECTOR_VERSION=5.1.40
 JAVA_MYSQL_CONNECTOR_JAR=mysql-connector-java-${JAVA_MYSQL_CONNECTOR_VERSION}.jar
-JAVA_MYSQL_CONNECTOR_DOWNLOAD=https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/${JAVA_MYSQL_CONNECTOR_VERSION}/mysql-connector-java-${JAVA_MYSQL_CONNECTOR_VERSION}.jar
+JAVA_MYSQL_CONNECTOR_DOWNLOAD=https://repo1.maven.org/maven2/mysql/mysql-connector-java/${JAVA_MYSQL_CONNECTOR_VERSION}/mysql-connector-java-${JAVA_MYSQL_CONNECTOR_VERSION}.jar
 
 # hadoop
 HADOOP_PREFIX=/usr/local/hadoop
@@ -62,7 +62,7 @@ SQOOP_RES_DIR=/vagrant/resources/sqoop
 TEZ_VERSION=0.9.1
 TEZ_RELEASE=apache-tez-${TEZ_VERSION}-bin
 TEZ_ARCHIVE=${TEZ_RELEASE}.tar.gz
-TEZ_MIRROR_DOWNLOAD=http://mirror.catn.com/pub/apache/tez/${TEZ_VERSION}/${TEZ_ARCHIVE}
+TEZ_MIRROR_DOWNLOAD=https://dlcdn.apache.org/tez/${TEZ_VERSION}/${TEZ_ARCHIVE}
 TEZ_RES_DIR=/vagrant/resources/tez
 
 # Pig
@@ -81,7 +81,7 @@ FLUME_MIRROR_DOWNLOAD=http://www.mirrorservice.org/sites/ftp.apache.org/flume/${
 FLUME_RES_DIR=/vagrant/resources/flume
 
 # Zeppelin 
-ZEPPELIN_VERSION=0.8.0
+ZEPPELIN_VERSION=0.7.2
 ZEPPELIN_RELEASE=zeppelin-${ZEPPELIN_VERSION}-bin-netinst
 ZEPPELIN_ARCHIVE=${ZEPPELIN_RELEASE}.tgz
 ZEPPELIN_MIRROR_DOWNLOAD=http://www-eu.apache.org/dist/zeppelin/zeppelin-${ZEPPELIN_VERSION}/${ZEPPELIN_ARCHIVE}
